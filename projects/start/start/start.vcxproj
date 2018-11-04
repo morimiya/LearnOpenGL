@@ -126,13 +126,16 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="imageutil.h" />
     <ClInclude Include="session.h" />
     <ClInclude Include="shader.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\ThirdPart\glad\glad.c" />
+    <ClCompile Include="hello_texture.cpp" />
     <ClCompile Include="hello_triangle.cpp" />
     <ClCompile Include="hello_window.cpp" />
+    <ClCompile Include="imageutil.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="shader.cpp" />
   </ItemGroup>
