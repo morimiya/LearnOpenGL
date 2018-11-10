@@ -38,6 +38,7 @@ static void processInput(GLFWwindow *window)
 		cameraPos -= glm::normalize(glm::cross(cameraFront, cameraUp)) * cameraSpeed;
 	if (glfwGetKey(window, GLFW_KEY_D) == GLFW_PRESS)
 		cameraPos += glm::normalize(glm::cross(cameraFront, cameraUp)) * cameraSpeed;
+	//cameraPos.y = 0.0f;
 }
 
 float lastX = 400, lastY = 300;
@@ -72,8 +73,7 @@ static void mouse_callback(GLFWwindow* window, double xpos, double ypos)
 		pitch = -89.0f;
 
 	glm::vec3 front;
-	front.x = cos(glm::radians(yaw));
-	// front.x = cos(glm::radians(yaw)) * cos(glm::radians(pitch));
+	front.x = cos(glm::radians(yaw)) * cos(glm::radians(pitch));
 	front.y = sin(glm::radians(pitch));
 	front.z = sin(glm::radians(yaw)) * cos(glm::radians(pitch));
 	cameraFront = glm::normalize(front);
