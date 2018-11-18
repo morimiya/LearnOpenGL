@@ -127,9 +127,11 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="..\..\ThirdPart\glad\glad.c" />
+    <ClCompile Include="..\..\ThirdPart\util\imageutil.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="session_basiclighting.cpp" />
     <ClCompile Include="session_colors.cpp" />
+    <ClCompile Include="session_lightingmaps.cpp" />
     <ClCompile Include="session_materials.cpp" />
     <ClCompile Include="shader.cpp" />
   </ItemGroup>
