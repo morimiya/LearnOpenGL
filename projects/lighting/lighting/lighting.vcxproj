@@ -134,6 +134,7 @@
     <ClCompile Include="session_lightcasters.cpp" />
     <ClCompile Include="session_lightingmaps.cpp" />
     <ClCompile Include="session_materials.cpp" />
+    <ClCompile Include="session_multiplelights.cpp" />
     <ClCompile Include="shader.cpp" />
   </ItemGroup>
   <ItemGroup>
