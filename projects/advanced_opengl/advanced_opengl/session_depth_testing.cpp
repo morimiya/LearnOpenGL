@@ -2,14 +2,13 @@
 #include <GLFW/glfw3.h>
 
 #include <util/imageutil.h>
+#include <util/camera.h>
+#include <util/model.h>
+#include <util/shader.h>
 
 #include <glm/glm.hpp>
 #include <glm/gtc/matrix_transform.hpp>
 #include <glm/gtc/type_ptr.hpp>
-
-#include "shader.h"
-#include "camera.h"
-#include "model.h"
 
 #include <iostream>
 

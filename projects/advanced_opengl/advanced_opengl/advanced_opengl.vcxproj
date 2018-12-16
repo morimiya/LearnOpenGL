@@ -127,19 +127,17 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="..\..\ThirdPart\util\imageutil.h" />
-    <ClInclude Include="camera.h" />
-    <ClInclude Include="mesh.h" />
-    <ClInclude Include="model.h" />
+    <ClInclude Include="..\..\ThirdPart\util\shader.h" />
     <ClInclude Include="session.h" />
-    <ClInclude Include="shader.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\ThirdPart\glad\glad.c" />
     <ClCompile Include="..\..\ThirdPart\util\imageutil.cpp" />
+    <ClCompile Include="..\..\ThirdPart\util\shader.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="session_blending.cpp" />
     <ClCompile Include="session_depth_testing.cpp" />
     <ClCompile Include="session_stencil_testing.cpp" />
-    <ClCompile Include="shader.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
