@@ -54,7 +54,7 @@ public:
 		GLuint diffuseNr = 0;
 		GLuint specularNr = 0;
 		//GLuint normalNr = 0;
-		//GLuint heightNr = 0;
+		GLuint heightNr = 0;
 		string number;
 		string name;
 		for (unsigned int i = 0; i < textures.size(); ++i) {
@@ -69,9 +69,9 @@ public:
 			//else if (name == "texture_normal") {
 			//	number = std::to_string(normalNr++);
 			//}
-			//else if (name == "texture_height") {
-			//	number = std::to_string(heightNr++);
-			//}
+			else if (name == "texture_height") {
+				number = std::to_string(heightNr++);
+			}
 			shader.setInt((name + number).c_str(), i);
 			glBindTexture(GL_TEXTURE_2D, textures[i].id);
 		}

@@ -127,6 +127,8 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="..\..\ThirdPart\util\imageutil.h" />
+    <ClInclude Include="..\..\ThirdPart\util\mesh.h" />
+    <ClInclude Include="..\..\ThirdPart\util\model.h" />
     <ClInclude Include="..\..\ThirdPart\util\shader.h" />
     <ClInclude Include="session.h" />
   </ItemGroup>
@@ -137,7 +139,9 @@
     <ClCompile Include="face_culling.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="session_blending.cpp" />
+    <ClCompile Include="session_cubemaps.cpp" />
     <ClCompile Include="session_depth_testing.cpp" />
+    <ClCompile Include="session_framebuffers.cpp" />
     <ClCompile Include="session_stencil_testing.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
