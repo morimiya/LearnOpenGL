@@ -20,8 +20,8 @@ static void scroll_callback(GLFWwindow* window, double xoffset, double yoffset);
 static void processInput(GLFWwindow *window);
 
 // settings
-static const unsigned int SCR_WIDTH = 1280;
-static const unsigned int SCR_HEIGHT = 720;
+static const unsigned int SCR_WIDTH = 600;
+static const unsigned int SCR_HEIGHT = 400;
 
 // camera
 static Camera camera(glm::vec3(0.0f, 0.0f, 3.0f));

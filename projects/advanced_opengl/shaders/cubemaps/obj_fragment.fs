@@ -19,9 +19,9 @@ void main()
     vec3 R = reflect(I, normalize(Normal));
     vec3 reflect_color = vec3(texture(skybox, R)) * vec3(texture(texture_height0, TexCoords));
     
-	// Combine them, but... I fail... idk why, cauz sample2D and samplerCube can not be combine?
-    // FragColor = vec4(diffuse_color + reflect_color, 1.0);
-	FragColor = vec4(reflect_color, 1.0);
+	// Combine them
+    FragColor = vec4(diffuse_color + reflect_color, 1.0);
+	// FragColor = vec4(reflect_color, 1.0);
 	// FragColor = vec4(reflect_color, 1.0);
 	// FragColor = mix(textureCube(skybox, R), textureCube(skybox, R), 0.3);
 	// FragColor = mix(texture2D(texture_diffuse0, TexCoords), texture2D(texture_diffuse0, TexCoords), 0.3);
