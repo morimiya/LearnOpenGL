@@ -143,6 +143,8 @@
     <ClCompile Include="session_cubemaps.cpp" />
     <ClCompile Include="session_depth_testing.cpp" />
     <ClCompile Include="session_framebuffers.cpp" />
+    <ClCompile Include="session_geometry_shader.cpp" />
+    <ClCompile Include="session_instancing.cpp" />
     <ClCompile Include="session_stencil_testing.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

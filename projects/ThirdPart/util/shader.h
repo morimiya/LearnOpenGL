@@ -16,6 +16,7 @@ public:
 	GLuint ID;
 
 	CShader(const char* vertexPath, const char* fragmentPath);
+	CShader(const char* vertexPath, const char* fragmentPath, const char* geometryPath);
 
 	// activate the shader
 	// ------------------------------------------------------------------------
