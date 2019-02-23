@@ -139,6 +139,7 @@
     <ClCompile Include="face_culling.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="session_advanced_GLSL.cpp" />
+    <ClCompile Include="session_anti_aliasing.cpp" />
     <ClCompile Include="session_blending.cpp" />
     <ClCompile Include="session_cubemaps.cpp" />
     <ClCompile Include="session_depth_testing.cpp" />
