@@ -7058,3 +7058,14 @@ projects/start/start/Debug/imageutil.obj
 projects/start/start/Debug/main.obj
 projects/start/start/Debug/shader.obj
 projects/advanced_opengl/advanced_opengl/Debug/session_anti_aliasing.obj
+projects/advanced_lighting/.vs/advanced_lighting/v15/.suo
+projects/advanced_lighting/.vs/advanced_lighting/v15/Browse.VC.db
+projects/advanced_lighting/advanced_lighting/advanced_lighting.vcxproj.filters
+projects/advanced_lighting/advanced_lighting/advanced_lighting.vcxproj.user
+projects/advanced_lighting/advanced_lighting/Debug/glad.obj
+projects/advanced_lighting/advanced_lighting/Debug/imageutil.obj
+projects/advanced_lighting/advanced_lighting/Debug/main.obj
+projects/advanced_lighting/advanced_lighting/Debug/session1_blinn_phong.obj
+projects/advanced_lighting/advanced_lighting/Debug/shader.obj
+projects/advanced_lighting/Debug/advanced_lighting.exe
+projects/advanced_lighting/Debug/advanced_lighting.ilk
