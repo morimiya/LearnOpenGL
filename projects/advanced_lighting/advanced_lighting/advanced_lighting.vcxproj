@@ -24,6 +24,7 @@
     <ClCompile Include="..\..\ThirdPart\util\shader.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="session1_blinn_phong.cpp" />
+    <ClCompile Include="session2_gamma_correction.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\ThirdPart\util\imageutil.h" />

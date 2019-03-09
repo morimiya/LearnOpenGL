@@ -2,5 +2,5 @@
 
 int main()
 {
-	return session1();
+	return session2();
 }
