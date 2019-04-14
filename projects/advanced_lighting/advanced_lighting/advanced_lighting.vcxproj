@@ -26,6 +26,7 @@
     <ClCompile Include="session1_blinn_phong.cpp" />
     <ClCompile Include="session2_gamma_correction.cpp" />
     <ClCompile Include="session3_shadow_mapping.cpp" />
+    <ClCompile Include="session4_point_shadows.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\ThirdPart\util\imageutil.h" />
