@@ -30,7 +30,7 @@ static bool hdrKeyPressed = false;
 static float exposure = 1.0f;
 
 // camera
-static Camera camera(glm::vec3(0.0f, 0.0f, 3.0f));
+static Camera camera(glm::vec3(0.0f, 1.0f, 5.0f));
 static float lastX = (float)SCR_WIDTH / 2.0;
 static float lastY = (float)SCR_HEIGHT / 2.0;
 static bool firstMouse = true;
