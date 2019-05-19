@@ -1,5 +1,6 @@
 #version 330 core
-out vec4 FragColor;
+layout (location = 0) out vec4 FragColor;
+layout (location = 1) out vec4 BrightColor;
 
 in VS_OUT {
     vec3 FragPos;
@@ -12,13 +13,13 @@ struct Light {
 	vec3 Color;
 };
 
-uniform sampler2D diffuseMap;
+uniform sampler2D diffuseTexture;
 uniform Light lights[4];
 uniform vec3 viewPos;
 
 void main()
 {
-	vec3 color = texture(diffuseMap, fs_in.TexCoords).rgb;
+	vec3 color = texture(diffuseTexture, fs_in.TexCoords).rgb;
 	vec3 ambient = 0.0 * color;
 	vec3 lighting = vec3(0.0);
 
@@ -31,5 +32,11 @@ void main()
 		result *= 1.0 / (distance * distance);
 		lighting += result;
 	}
-	FragColor = vec4(ambient + lighting, 1.0);
+	vec3 result = ambient + lighting;
+	float brightness = dot(result, vec3(0.2126, 0.7152, 0.0722));
+	if(brightness > 1.0)
+		BrightColor = vec4(result, 1.0);
+	else
+		BrightColor = vec4(0.0, 0.0, 0.0, 1.0);
+	FragColor = vec4(result, 1.0);
 }
