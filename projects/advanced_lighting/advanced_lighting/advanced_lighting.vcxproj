@@ -31,6 +31,7 @@
     <ClCompile Include="session6_parallax_mapping.cpp" />
     <ClCompile Include="session7_hdr.cpp" />
     <ClCompile Include="session8_bloom.cpp" />
+    <ClCompile Include="session9_deferred_shading.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\ThirdPart\util\imageutil.h" />
