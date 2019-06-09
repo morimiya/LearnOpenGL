@@ -23,6 +23,7 @@
     <ClCompile Include="..\..\ThirdPart\util\imageutil.cpp" />
     <ClCompile Include="..\..\ThirdPart\util\shader.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="session10_ssao.cpp" />
     <ClCompile Include="session1_blinn_phong.cpp" />
     <ClCompile Include="session2_gamma_correction.cpp" />
     <ClCompile Include="session3_shadow_mapping.cpp" />
