@@ -318,7 +318,6 @@ int session10()
 		const float quadratic = 0.032;
 		lightShader.setFloat("light.Linear", linear);
 		lightShader.setFloat("light.Quadratic", quadratic);
-		lightShader.setVec3("viewPos", camera.Position);
 		renderQuad();
 
 		glfwSwapBuffers(window);

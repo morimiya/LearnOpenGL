@@ -17,7 +17,6 @@ struct Light {
 };
 
 uniform Light light;
-uniform vec3 viewPos;
 
 void main()
 {
@@ -28,7 +27,7 @@ void main()
 	float AmbientOcclusion = texture(ssao, TexCoords).r;
 
 	vec3 lighting = vec3(0.3 * Diffuse * AmbientOcclusion);
-	vec3 viewDir = normalize(viewPos - FragPos);
+	vec3 viewDir = normalize(-FragPos);
 	
 	vec3 lightDir = normalize(light.Position - FragPos);
 	vec3 diffuse = max(dot(Normal, lightDir), 0.0) * Diffuse * light.Color;
@@ -41,6 +40,6 @@ void main()
 	float attenuation = 1.0 / (1.0 + light.Linear * distance + light.Quadratic * distance * distance);
 
 	lighting += attenuation * diffuse + attenuation * specular;
-	// FragColor = vec4(AmbientOcclusion, 0, 0, 1.0);
+	// FragColor = vec4(vec3(AmbientOcclusion), 1.0);
 	FragColor = vec4(lighting, 1.0);
 }
