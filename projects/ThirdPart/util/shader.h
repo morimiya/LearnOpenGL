@@ -15,8 +15,11 @@ class CShader
 public:
 	GLuint ID;
 
+	CShader() {}
 	CShader(const char* vertexPath, const char* fragmentPath);
 	CShader(const char* vertexPath, const char* fragmentPath, const char* geometryPath);
+
+	void compileShaderCode(const char *vShaderCode, const char *fShaderCode);
 
 	// activate the shader
 	// ------------------------------------------------------------------------
