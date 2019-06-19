@@ -34,7 +34,26 @@ CShader::CShader(const char* vertexPath, const char* fragmentPath)
 	const char* vShaderCode = vertexCode.c_str();
 	const char * fShaderCode = fragmentCode.c_str();
 	// 2. compile shaders
-	compileShaderCode(vShaderCode, fShaderCode);
+	GLuint vertex, fragment;
+	// vertex shader
+	vertex = glCreateShader(GL_VERTEX_SHADER);
+	glShaderSource(vertex, 1, &vShaderCode, NULL);
+	glCompileShader(vertex);
+	checkCompileErrors(vertex, "VERTEX");
+	// fragment Shader
+	fragment = glCreateShader(GL_FRAGMENT_SHADER);
+	glShaderSource(fragment, 1, &fShaderCode, NULL);
+	glCompileShader(fragment);
+	checkCompileErrors(fragment, "FRAGMENT");
+	// shader Program
+	ID = glCreateProgram();
+	glAttachShader(ID, vertex);
+	glAttachShader(ID, fragment);
+	glLinkProgram(ID);
+	checkCompileErrors(ID, "PROGRAM");
+	// delete the shaders as they're linked into our program now and no longer necessary
+	glDeleteShader(vertex);
+	glDeleteShader(fragment);
 }
 
 CShader::CShader(const char* vertexPath, const char* fragmentPath, const char* geometryPath)
@@ -106,31 +125,6 @@ CShader::CShader(const char* vertexPath, const char* fragmentPath, const char* g
 	glDeleteShader(vertex);
 	glDeleteShader(fragment);
 	glDeleteShader(geometry);
-}
-
-
-void CShader::compileShaderCode(const char *vShaderCode, const char *fShaderCode)
-{
-	GLuint vertex, fragment;
-	// vertex shader
-	vertex = glCreateShader(GL_VERTEX_SHADER);
-	glShaderSource(vertex, 1, &vShaderCode, NULL);
-	glCompileShader(vertex);
-	checkCompileErrors(vertex, "VERTEX");
-	// fragment Shader
-	fragment = glCreateShader(GL_FRAGMENT_SHADER);
-	glShaderSource(fragment, 1, &fShaderCode, NULL);
-	glCompileShader(fragment);
-	checkCompileErrors(fragment, "FRAGMENT");
-	// shader Program
-	ID = glCreateProgram();
-	glAttachShader(ID, vertex);
-	glAttachShader(ID, fragment);
-	glLinkProgram(ID);
-	checkCompileErrors(ID, "PROGRAM");
-	// delete the shaders as they're linked into our program now and no longer necessary
-	glDeleteShader(vertex);
-	glDeleteShader(fragment);
 }
 
 
