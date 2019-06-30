@@ -17,7 +17,7 @@ public:
 
 	CShader() {}
 	CShader(const char* vertexPath, const char* fragmentPath);
-	CShader(const char* vertexPath, const char* fragmentPath, const char* geometryPath);
+	CShader(const char* vertexPath, const char* fragmentPath, const char* geometryPath=nullptr);
 
 	void compileShaderCode(const char *vShaderCode, const char *fShaderCode);
 
