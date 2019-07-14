@@ -5,6 +5,7 @@
 #include <GLFW/glfw3.h>
 
 #include "gamelevel.h"
+#include "gameobject.h"
 
 
 // Represents the current state of the game
@@ -41,6 +42,9 @@ public:
 
 	CGameLevel	m_GameLevel;
 	int m_Level;
+
+	std::vector<CPowerUp> m_PowerUps;
+
 	// Constructor/Destructor
 	CGame(GLuint width, GLuint height);
 	~CGame();
@@ -54,6 +58,9 @@ public:
 
 	void ResetLevel();
 	void ResetPlayer();
+
+	void SpawnPowerUps(CGameObject &block);
+	void UpdatePowerUps(float dt);
 };
 
 #endif

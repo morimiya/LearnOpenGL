@@ -8,6 +8,9 @@
 #include <util/texture.h>
 #include "sprite.h"
 
+const glm::vec2 POWERUP_SIZE(60, 20);
+const glm::vec2 VELOCITY(0.0f, 150.0f);
+
 class CGameObject
 {
 public:
@@ -31,12 +34,29 @@ class CBallObject : public CGameObject
 public:
 	float m_Radius;
 	bool m_IsStuck;
+	bool m_IsSticky;
+	bool m_IsPassThrough;
 
 	CBallObject();
 	CBallObject(glm::vec2 pos, float radius, glm::vec2 velocity, CTexture2D sprite);
 
 	glm::vec2 Move(float dt, int wndW);
 	void Reset(glm::vec2 position, glm::vec2 velocity);
+};
+
+
+class CPowerUp : public CGameObject
+{
+public:
+	std::string m_sType;
+	float m_Duration;
+	bool m_IsActivated;
+
+	CPowerUp(std::string sType, glm::vec3 color, float duration, glm::vec2 pos, CTexture2D texture)
+		: CGameObject(pos, POWERUP_SIZE, texture, color, VELOCITY),
+		m_sType(sType), m_Duration(duration), m_IsActivated(false) {
+
+	}
 };
 
 #endif //GAMEOBJECT_H

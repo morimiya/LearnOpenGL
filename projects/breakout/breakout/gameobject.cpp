@@ -35,6 +35,8 @@ CBallObject::CBallObject()
 {
 	m_Radius = 12.5f;
 	m_IsStuck = true;
+	m_IsSticky = false;
+	m_IsPassThrough = false;
 }
 
 CBallObject::CBallObject(glm::vec2 pos, float radius, glm::vec2 velocity, CTexture2D sprite)
@@ -42,6 +44,8 @@ CBallObject::CBallObject(glm::vec2 pos, float radius, glm::vec2 velocity, CTextu
 {
 	m_Radius = radius;
 	m_IsStuck = true;
+	m_IsSticky = false;
+	m_IsPassThrough = false;
 }
 
 glm::vec2 CBallObject::Move(float dt, int wndW)
@@ -69,4 +73,6 @@ void CBallObject::Reset(glm::vec2 position, glm::vec2 velocity)
 	m_Position = position;
 	m_Velocity = velocity;
 	m_IsStuck = true;
+	m_IsSticky = false;
+	m_IsPassThrough = false;
 }
